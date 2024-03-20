@@ -1,0 +1,161 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2;
+  color: #040404;
+  background-color: rgb(196, 196, 196);
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  color: inherit;
+  font: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 62px 84px 72px 77px;
+}
+
+.article {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search {
+  margin-bottom: 53px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.search__input {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+
+  width: 100%;
+  padding-left: 13px;
+  padding-top: 5px;
+  border: none;
+}
+
+.autocompleteList__item {
+  background-color: rgb(227, 227, 227);
+  padding-left: 13px;
+  padding-bottom: 9px;
+  border: 2px solid black;
+
+  transition: all 0.3s ease;
+}
+.autocompleteList__item:focus,
+.autocompleteList__item:hover {
+  background-color: #65cdf9;
+  transition: all 0.3s ease;
+}
+/*  */
+.repo {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.repoList__item {
+  background-color: rgb(226, 123, 235);
+  padding-left: 13px;
+  padding-bottom: 9px;
+  border: 1px solid black;
+  padding: 8px 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn__delete {
+  width: 42px;
+  height: 42px;
+  position: relative;
+  margin-right: 17px;
+}
+
+.btn__delete:before,
+.btn__delete:after {
+  content: '';
+  position: absolute;
+  background-color: red;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform-origin: center;
+
+  transition: background-color 0.3s ease-out;
+}
+
+.btn__delete:before {
+  transform: rotate(45deg);
+}
+
+.btn__delete:after {
+  transform: rotate(-45deg);
+}
+
+.btn__delete:hover:before,
+.btn__delete:hover:after {
+  background-color: black;
+  transition: background-color 0.5s ease-in;
+}
+
+@media (max-width: 480px) {
+  .search {
+    font-size: 21px;
+    line-height: 28px;
+  }
+  .search__input {
+    font-size: 31px;
+    line-height: 45px;
+  }
+  .autocompleteList__item {
+    padding: 8px 16px;
+  }
+  .repo {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .btn__delete {
+    margin-right: 0;
+  }
+}
